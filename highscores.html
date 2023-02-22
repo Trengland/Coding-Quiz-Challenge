@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Quiz Highscores</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="position:relative; margin-bottom:0;">Highscores</h1>
+        <div id="scoresList"></div>
+        <a class="btn btn-primary" href="./index.html">Back to HOME Screen</a> <br> <br>
+        <button class="btn btn-primary" id="clearScores">Clear Scores</button>
+    </div>
+
+
+    <script>
+        var scoresArray = JSON.parse(localStorage.getItem("localHighScores"));
+        
+        function printAndShowLeaderboard() {
+            var scoresList = document.querySelector("#scoresList");
+            var html = "";
+            var scoreAlternating = false;
+            for (var i = 0; i < scoresArray.length; i++) {
+                if (scoreAlternating) {
+                    html += `<h3 class="scoreStyle scoreAltColour">${i + 1}. ${scoresArray[i].initials} - ${scoresArray[i].score}</h3>`
+                    scoreAlternating = false;
+                } else {
+                    html += `<h3 class="scoreStyle">${i + 1}. ${scoresArray[i].initials} - ${scoresArray[i].score}</h3>`
+                    scoreAlternating = true;
+                }
+            }
+            scoresList.innerHTML = html;
+        }
+
+        function clearSavedScores() {
+            localStorage.clear();
+            scoresList.innerHTML = "";
+        }
+
+        printAndShowLeaderboard();
+        document.querySelector("#clearScores").onclick = clearSavedScores;
+
+    </script>
+</body>
+
+</html>

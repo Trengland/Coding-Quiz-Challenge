@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets\CSS\style.css" />
+    <title>It's a Coding Quiz!</title>
+  </head>
+
+  <body>
+      <div class="scores"><a class="navbar-brand" href="./highscores.html">View Highscores</a></div>
+      <br>
+      <div class="navbar-text">Timer: <span id="time">0</span></div>
+    <div class="container">
+      <div id="titleScreen">
+        <h1>Coding Quiz Challenge!</h1>
+        <p>
+          Test your knowledge on Web Development by taking this multiple-choice
+          quiz. Incorrect choices will deduct 10 seconds from your time, so be careful!
+          <br><em>Click "Start Quiz" below to begin!</em>
+        </p>
+        <br>
+        <button class="btn-primary" id="start-quiz">Start Quiz!</button>
+      </div>
+
+      <div class="hide" id="questionBlock">
+        <h2 id="questionPrompt"></h2>
+        <div id="choices" class="choices"></div>
+        <div id="answerResult" class="hide"></div>
+      </div>
+
+
+      <div id="endGameBlock" class="hide">
+        <h1>Quiz Complete!</h1>
+        <p>Here is Your Final Score:</p>
+        <br>
+        <h3 id="showScore">DNF</h3>
+        <form id="submitInitials">
+          <div class="form-group">
+            <label for="inputInitials">Enter Your Initials</label>
+            <input
+              type="text"
+              class="form-control"
+              id="playerInitials"
+              value=""/>
+          <br>
+            </div>
+            <br>
+          <button type="submit" class="btn btn-primary" id="submitButton">
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+    <script src="./assets/JS/main.js"></script>
+    <script src="./assets/JS/questions.js"></script>
+  </body>
+</html>
