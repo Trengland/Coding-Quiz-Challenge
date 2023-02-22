@@ -1,8 +1,12 @@
 README file for a Coding Quiz app with a timer that subtracts time when the question is answered incorrectly
 
-Link to GitHub Repo - https://github.com/Trengland/Coding-Quiz
-Link to Live Deployed Site - 
+Link to GitHub Repo - https://github.com/Trengland/Coding-Quiz-Challenge
+
+Link to Live Deployed Site - https://trengland.github.io/Coding-Quiz-Challenge/
+
 Screenshot of app: 
+![image](https://user-images.githubusercontent.com/122329399/220512227-be936478-e44c-433d-98e2-58a12ad1e87e.png)
+
 
 
 // - created basic HTML files for both pages (Main and Highscores) - created basic css file for overall style cleanup
